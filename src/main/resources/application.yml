@@ -3,9 +3,7 @@ spring:
     name: beneficiary-services
   data:
     mongodb:
-      database : bene_db
-      host: 10.240.172.120
-      port: 27017
+      uri: mongodb://${MONGO_DATABASE_USER}:${MONGO_DATABASE_PASSWORD}@mongodb/${MONGO_DATABASE_NAME}
   jpa: 
     hibernate: 
       ddl-auto: update
