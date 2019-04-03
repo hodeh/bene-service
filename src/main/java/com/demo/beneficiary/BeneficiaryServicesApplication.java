@@ -15,7 +15,6 @@ import com.demo.beneficiary.domain.beneficiary.fieldconfig.FieldType;
 import com.demo.beneficiary.repository.beneficiary.fieldconfig.FieldRepository;
 
 @SpringBootApplication
-//@EnableDiscoveryClient
 @EnableJpaRepositories
 @EnableMongoRepositories
 @EntityScan(basePackages = { "com.demo.beneficiary.domain.beneficiary" })
