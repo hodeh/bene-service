@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: beneficiary-services
+  data:
+    mongodb:
+      database : bene_db
+      host: 10.240.172.120
+      port: 27017
+  jpa: 
+    hibernate: 
+      ddl-auto: update
+server:
+  port: 8086
+eureka: 
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+management:
+   endpoint:
+      health:
+        show-details: "ALWAYS"
+      metrics :
+        enabled : true
+      prometheus : 
+        enabled : true
+   metrics :
+      export : 
+         prometheus : 
+           enabled : true
+           
+   endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: env,beans
