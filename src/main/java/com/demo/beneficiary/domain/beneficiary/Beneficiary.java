@@ -24,15 +24,7 @@ public class Beneficiary implements Serializable {
 	private String transferType;
 	private Map<String, Object> customFields;
 	private String fieldMappingId;
-	private String sponseringBank;
 
-	public String getSponseringBank() {
-	return sponseringBank;
-	}
-	
-	public void setSponseringBank(String sponseringBank){
-		this.sponseringBank = sponseringBank;
-	}
 	public String getId() {
 		return id;
 	}
