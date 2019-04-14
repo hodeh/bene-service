@@ -24,6 +24,15 @@ public class Beneficiary implements Serializable {
 	private String transferType;
 	private Map<String, Object> customFields;
 	private String fieldMappingId;
+	private String newField;
+	
+	public String getNewField() {
+	return newField;
+	}
+	
+	public void setNewField(String newField){
+	this.newField = newField;
+	}
 
 	public String getId() {
 		return id;
