@@ -7,16 +7,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 import com.demo.beneficiary.domain.beneficiary.fieldconfig.Field;
 import com.demo.beneficiary.domain.beneficiary.fieldconfig.FieldType;
 import com.demo.beneficiary.repository.beneficiary.fieldconfig.FieldRepository;
 
 @SpringBootApplication
-@EnableJpaRepositories
-@EnableMongoRepositories
 @EntityScan(basePackages = { "com.demo.beneficiary.domain.beneficiary" })
 public class BeneficiaryServicesApplication {
 
@@ -28,7 +24,7 @@ public class BeneficiaryServicesApplication {
 	public CommandLineRunner loadData(FieldRepository repository) {
 		return (args) -> {
 			System.out.println("### --- Loading Field data in DB --- ###");
-			
+
 			Field f1 = new Field();
 			f1.setFieldNameInEnglish("Bank IFSC code");
 			f1.setCreatedAt(new Date());
@@ -39,7 +35,7 @@ public class BeneficiaryServicesApplication {
 			f1.setUpdatedAt(new Date());
 			repository.save(f1);
 			System.out.println("### --- Loaded 1 Field data in DB --- ###");
-			
+
 			Field f2 = new Field();
 			f2.setFieldNameInEnglish("Bank Name");
 			f2.setCreatedAt(new Date());
@@ -50,7 +46,7 @@ public class BeneficiaryServicesApplication {
 			f2.setUpdatedAt(new Date());
 			repository.save(f2);
 			System.out.println("### --- Loaded 2 Field data in DB --- ###");
-			
+
 			Field f3 = new Field();
 			f3.setFieldNameInEnglish("Bank Custome Field");
 			f3.setCreatedAt(new Date());

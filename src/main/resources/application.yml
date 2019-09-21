@@ -1,9 +1,9 @@
 spring:
   application:
     name: beneficiary-services
-  data:
-    mongodb:
-      uri: mongodb://${MONGO_DATABASE_USER}:${MONGO_DATABASE_PASSWORD}@mongodb/${MONGO_DATABASE_NAME}
+#  data:
+#    mongodb:
+#      uri: mongodb://${MONGO_DATABASE_USER}:${MONGO_DATABASE_PASSWORD}@mongodb/${MONGO_DATABASE_NAME}
   jpa: 
     hibernate: 
       ddl-auto: update
